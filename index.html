@@ -214,7 +214,8 @@
 
   footer{padding:48px 0 80px; text-align:center; color:var(--text-secondary); font-size:13px;}
 
-  .fade-up{opacity:0; transform:translateY(24px);}
+  /* .fade-up стартует видимым: анимация из invisible включается только из JS,
+     чтобы контент не пропадал, если CDN с motion недоступен */
 
   @media (max-width: 600px){
     .layer-card{grid-template-columns:40px 1fr; grid-template-areas:"num main" "freq freq";}
