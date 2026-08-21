@@ -130,6 +130,19 @@
     border-radius:16px;
     padding:20px 24px;
     box-shadow:var(--shadow);
+    text-decoration:none;
+    color:inherit;
+    cursor:pointer;
+    transition:border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+  }
+  .layer-card:hover{
+    border-color:var(--accent);
+    transform:translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,.06), 0 12px 32px rgba(0,0,0,.1);
+  }
+  .layer-card:hover .file{
+    color:var(--accent);
+    background:color-mix(in srgb, var(--accent) 12%, var(--code-bg));
   }
   .layer-num{
     font-size:28px; font-weight:700; color:var(--text-secondary);
@@ -140,16 +153,7 @@
     font-size:15px; font-weight:600; color:var(--text);
     background:var(--code-bg); padding:2px 8px; border-radius:6px;
     display:inline-block; margin-bottom:6px;
-    text-decoration:none;
     transition:color .15s ease, background .15s ease;
-  }
-  a.layer-main .file,
-  .layer-main a.file{
-    cursor:pointer;
-  }
-  .layer-main a.file:hover{
-    color:var(--accent);
-    background:color-mix(in srgb, var(--accent) 12%, var(--code-bg));
   }
   .layer-main .desc{color:var(--text-secondary); font-size:15px;}
   .layer-freq{
@@ -283,51 +287,51 @@
     <h2>Пять слоёв</h2>
     <p class="section-sub">От самого раннего сигнала к самому позднему и самому официальному.</p>
     <div class="layers">
-      <div class="layer-card">
+      <a class="layer-card" href="https://github.com/wonderland511/aml-radar/blob/main/hacks_radar.py" target="_blank" rel="noreferrer">
         <div class="layer-num">3</div>
         <div class="layer-main">
           <span class="badge fast">опережающий · основной</span><br/>
-          <a class="file" href="https://github.com/wonderland511/aml-radar/blob/main/hacks_radar.py" target="_blank" rel="noreferrer">hacks_radar.py</a>
+          <span class="file">hacks_radar.py</span>
           <div class="desc">DefiLlama /hacks + RSS-ленты (rekt.news и т.п.). Ловит инцидент раньше, чем сработает любой скоринг.</div>
         </div>
         <div class="layer-freq">каждые 20 мин</div>
-      </div>
-      <div class="layer-card">
+      </a>
+      <a class="layer-card" href="https://github.com/wonderland511/aml-radar/blob/main/exposure_watch.py" target="_blank" rel="noreferrer">
         <div class="layer-num">4</div>
         <div class="layer-main">
           <span class="badge me">персональный</span><br/>
-          <a class="file" href="https://github.com/wonderland511/aml-radar/blob/main/exposure_watch.py" target="_blank" rel="noreferrer">exposure_watch.py</a>
+          <span class="file">exposure_watch.py</span>
           <div class="desc">Смотрит входящие на твои кошельки и горячие кошельки обменников на грязное множество (OFAC + OpenSanctions + миксеры).</div>
         </div>
         <div class="layer-freq">каждые 30 мин</div>
-      </div>
-      <div class="layer-card">
+      </a>
+      <a class="layer-card" href="https://github.com/wonderland511/aml-radar/blob/main/opensanctions_radar.py" target="_blank" rel="noreferrer">
         <div class="layer-num">2</div>
         <div class="layer-main">
           <span class="badge mid">средний</span><br/>
-          <a class="file" href="https://github.com/wonderland511/aml-radar/blob/main/opensanctions_radar.py" target="_blank" rel="noreferrer">opensanctions_radar.py</a>
+          <span class="file">opensanctions_radar.py</span>
           <div class="desc">~450 источников разом: OFAC, ЕС, UK OFSI, Украина, Израиль, FBI Lazarus. Часто раньше США.</div>
         </div>
         <div class="layer-freq">каждые 6 часов</div>
-      </div>
-      <div class="layer-card">
+      </a>
+      <a class="layer-card" href="https://github.com/wonderland511/aml-radar/blob/main/ofac_radar.py" target="_blank" rel="noreferrer">
         <div class="layer-num">1</div>
         <div class="layer-main">
           <span class="badge slow">запаздывающий</span><br/>
-          <a class="file" href="https://github.com/wonderland511/aml-radar/blob/main/ofac_radar.py" target="_blank" rel="noreferrer">ofac_radar.py</a>
+          <span class="file">ofac_radar.py</span>
           <div class="desc">Официальный список США. Формальное подтверждение того, что аналитики знали давно.</div>
         </div>
         <div class="layer-freq">раз в час</div>
-      </div>
-      <div class="layer-card">
+      </a>
+      <a class="layer-card" href="https://github.com/wonderland511/aml-radar/blob/main/aml_journal.py" target="_blank" rel="noreferrer">
         <div class="layer-num">5</div>
         <div class="layer-main">
           <span class="badge log">журнал</span><br/>
-          <a class="file" href="https://github.com/wonderland511/aml-radar/blob/main/aml_journal.py" target="_blank" rel="noreferrer">aml_journal.py</a>
+          <span class="file">aml_journal.py</span>
           <div class="desc">История проверок с датами и пакет доказательств происхождения на случай заморозки депозита.</div>
         </div>
         <div class="layer-freq">вручную + пн</div>
-      </div>
+      </a>
     </div>
   </div>
 </section>
