@@ -140,6 +140,16 @@
     font-size:15px; font-weight:600; color:var(--text);
     background:var(--code-bg); padding:2px 8px; border-radius:6px;
     display:inline-block; margin-bottom:6px;
+    text-decoration:none;
+    transition:color .15s ease, background .15s ease;
+  }
+  a.layer-main .file,
+  .layer-main a.file{
+    cursor:pointer;
+  }
+  .layer-main a.file:hover{
+    color:var(--accent);
+    background:color-mix(in srgb, var(--accent) 12%, var(--code-bg));
   }
   .layer-main .desc{color:var(--text-secondary); font-size:15px;}
   .layer-freq{
@@ -277,7 +287,7 @@
         <div class="layer-num">3</div>
         <div class="layer-main">
           <span class="badge fast">опережающий · основной</span><br/>
-          <span class="file">hacks_radar.py</span>
+          <a class="file" href="https://github.com/wonderland511/aml-radar/blob/main/hacks_radar.py" target="_blank" rel="noreferrer">hacks_radar.py</a>
           <div class="desc">DefiLlama /hacks + RSS-ленты (rekt.news и т.п.). Ловит инцидент раньше, чем сработает любой скоринг.</div>
         </div>
         <div class="layer-freq">каждые 20 мин</div>
@@ -286,7 +296,7 @@
         <div class="layer-num">4</div>
         <div class="layer-main">
           <span class="badge me">персональный</span><br/>
-          <span class="file">exposure_watch.py</span>
+          <a class="file" href="https://github.com/wonderland511/aml-radar/blob/main/exposure_watch.py" target="_blank" rel="noreferrer">exposure_watch.py</a>
           <div class="desc">Смотрит входящие на твои кошельки и горячие кошельки обменников на грязное множество (OFAC + OpenSanctions + миксеры).</div>
         </div>
         <div class="layer-freq">каждые 30 мин</div>
@@ -295,7 +305,7 @@
         <div class="layer-num">2</div>
         <div class="layer-main">
           <span class="badge mid">средний</span><br/>
-          <span class="file">opensanctions_radar.py</span>
+          <a class="file" href="https://github.com/wonderland511/aml-radar/blob/main/opensanctions_radar.py" target="_blank" rel="noreferrer">opensanctions_radar.py</a>
           <div class="desc">~450 источников разом: OFAC, ЕС, UK OFSI, Украина, Израиль, FBI Lazarus. Часто раньше США.</div>
         </div>
         <div class="layer-freq">каждые 6 часов</div>
@@ -304,7 +314,7 @@
         <div class="layer-num">1</div>
         <div class="layer-main">
           <span class="badge slow">запаздывающий</span><br/>
-          <span class="file">ofac_radar.py</span>
+          <a class="file" href="https://github.com/wonderland511/aml-radar/blob/main/ofac_radar.py" target="_blank" rel="noreferrer">ofac_radar.py</a>
           <div class="desc">Официальный список США. Формальное подтверждение того, что аналитики знали давно.</div>
         </div>
         <div class="layer-freq">раз в час</div>
@@ -313,7 +323,7 @@
         <div class="layer-num">5</div>
         <div class="layer-main">
           <span class="badge log">журнал</span><br/>
-          <span class="file">aml_journal.py</span>
+          <a class="file" href="https://github.com/wonderland511/aml-radar/blob/main/aml_journal.py" target="_blank" rel="noreferrer">aml_journal.py</a>
           <div class="desc">История проверок с датами и пакет доказательств происхождения на случай заморозки депозита.</div>
         </div>
         <div class="layer-freq">вручную + пн</div>
