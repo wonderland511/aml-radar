@@ -1,0 +1,5 @@
+config.json
+state/
+*.pyc
+__pycache__/
+proof_*.json

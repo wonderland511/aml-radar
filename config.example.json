@@ -1,0 +1,37 @@
+{
+  "_comment": "Скопируй в config.json и заполни. Никогда не коммить config.json в git.",
+
+  "telegram": {
+    "token": "123456:AAExxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "chat_id": "-1001234567890"
+  },
+
+  "etherscan_api_key": "ВАШ_КЛЮЧ_ETHERSCAN_V2",
+  "trongrid_api_key": "",
+
+  "hack_alert_threshold_usd": 5000000,
+
+  "my_wallets": [
+    {"chain": "eth", "chainid": 1,     "address": "0x0000000000000000000000000000000000000000", "label": "основной"},
+    {"chain": "eth", "chainid": 56,    "address": "0x0000000000000000000000000000000000000000", "label": "bsc"},
+    {"chain": "eth", "chainid": 42161, "address": "0x0000000000000000000000000000000000000000", "label": "arbitrum"},
+    {"chain": "trx",                   "address": "TXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",         "label": "usdt-приём"}
+  ],
+
+  "watch_exchangers": [
+    {"name": "Обменник-1 hot", "chain": "eth", "chainid": 1, "address": "0x0000000000000000000000000000000000000000",
+     "note": "адрес взят из моего последнего вывода"},
+    {"name": "Обменник-1 trc", "chain": "trx", "address": "TXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+     "note": "их usdt-хот"}
+  ],
+
+  "extra_blacklist": [],
+
+  "rss_feeds": [
+    "https://rekt.news/rss/index.xml"
+  ],
+  "rss_keywords": [
+    "hack", "hacked", "exploit", "drained", "stolen", "breach",
+    "rug", "seized", "sanction", "shutdown", "взлом", "санкц"
+  ]
+}
